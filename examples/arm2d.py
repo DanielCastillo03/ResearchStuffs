@@ -10,7 +10,7 @@ if __name__ == '__main__':
     for i in range(3000):
         action = env.action_space.sample()
         observation, reward, done, info = env.step(action)
-        print(observation)
-        print(len(observation))
+        # print(observation)
+        # print(len(observation))
         if done:
             env.reset()

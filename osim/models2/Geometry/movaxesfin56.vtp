@@ -1,0 +1,97 @@
+<VTKFile type="PolyData" version="0.1" byte_order="LittleEndian" header_type="UInt64">
+  <PolyData>
+    <Piece NumberOfPoints="27" NumberOfVerts="0" NumberOfLines="0" NumberOfStrips="0" NumberOfPolys="50">
+      <PointData>
+      </PointData>
+      <CellData Scalars="STLSolidLabeling">
+        <DataArray type="Float32" Name="STLSolidLabeling" format="ascii" RangeMin="0" RangeMax="0">
+          0 0 0 0 0 0
+          0 0 0 0 0 0
+          0 0 0 0 0 0
+          0 0 0 0 0 0
+          0 0 0 0 0 0
+          0 0 0 0 0 0
+          0 0 0 0 0 0
+          0 0 0 0 0 0
+          0 0
+        </DataArray>
+      </CellData>
+      <Points>
+        <DataArray type="Float32" Name="Points" NumberOfComponents="3" format="ascii" RangeMin="0.0064967799694" RangeMax="0.025949996977">
+          0.0063129998744 -0.003318995703 0.011393001303 0.0095939999446 -0.00021798958187 0.0062700007111
+          0.0024059999269 -0.0011200015433 0.0059300009161 0.007590000052 -4.8801301888e-010 0.0012490003137
+          0.0095239998773 -0.004085988272 0.0055680014193 0.0062179998495 -0.0062809889205 0.010106001049
+          0.0026319997851 -0.0051449988969 0.0047980006784 0.0075159999542 -0.0044079874642 0.0010000000475
+          0.0084520000964 -0.0078379968181 0.0057310014963 0.0057860002853 -0.0094469944015 0.0093280002475
+          0.003629000159 -0.0090459892526 0.0049560014158 0.0064329998568 -0.0083539942279 0.0026300007012
+          0.0082839997485 -0.011777997948 0.0056090001017 0.0058030001819 -0.012312994339 0.0083860009909
+          0.0037729998585 -0.013169989921 0.0051560010761 0.0061610001139 -0.01269298885 0.0030800008681
+          0.0082459999248 -0.015607000329 0.0061480011791 0.0070290002041 -0.015309990384 0.0088340006769
+          0.0040629999712 -0.017303988338 0.0053050015122 0.0067480001599 -0.017477989197 0.0030460001435
+          0.00916100014 -0.019325986505 0.0063780006021 0.007950999774 -0.018318995833 0.0090090017766
+          0.0054910001345 -0.020909994841 0.0060100015253 0.00762199983 -0.021749988198 0.0038830002304
+          0.0087200002745 -0.021351993084 0.0090740006417 0.0081059997901 -0.023044988513 0.0068880002946
+          0.0075779999606 -0.023633986712 0.0075770001858
+        </DataArray>
+      </Points>
+      <Verts>
+        <DataArray type="Int64" Name="connectivity" format="ascii" RangeMin="1e+299" RangeMax="-1e+299">
+        </DataArray>
+        <DataArray type="Int64" Name="offsets" format="ascii" RangeMin="1e+299" RangeMax="-1e+299">
+        </DataArray>
+      </Verts>
+      <Lines>
+        <DataArray type="Int64" Name="connectivity" format="ascii" RangeMin="1e+299" RangeMax="-1e+299">
+        </DataArray>
+        <DataArray type="Int64" Name="offsets" format="ascii" RangeMin="1e+299" RangeMax="-1e+299">
+        </DataArray>
+      </Lines>
+      <Strips>
+        <DataArray type="Int64" Name="connectivity" format="ascii" RangeMin="1e+299" RangeMax="-1e+299">
+        </DataArray>
+        <DataArray type="Int64" Name="offsets" format="ascii" RangeMin="1e+299" RangeMax="-1e+299">
+        </DataArray>
+      </Strips>
+      <Polys>
+        <DataArray type="Int64" Name="connectivity" format="ascii" RangeMin="0" RangeMax="26">
+          0 1 2 3 2 1
+          1 0 4 5 4 0
+          2 6 0 5 0 6
+          7 3 4 1 4 3
+          3 7 2 6 2 7
+          4 5 8 9 8 5
+          6 10 5 9 5 10
+          7 4 11 8 11 4
+          7 11 6 10 6 11
+          8 9 12 13 12 9
+          14 13 10 9 10 13
+          8 12 11 15 11 12
+          11 15 10 10 15 14
+          12 13 16 17 16 13
+          18 17 14 13 14 17
+          19 15 16 12 16 15
+          19 18 15 14 15 18
+          20 16 21 17 21 16
+          22 21 18 17 18 21
+          23 19 20 19 16 20
+          18 19 22 23 22 19
+          21 24 20 25 20 24
+          22 26 21 24 21 26
+          23 20 25 23 25 22
+          25 26 22 25 24 26
+        </DataArray>
+        <DataArray type="Int64" Name="offsets" format="ascii" RangeMin="3" RangeMax="150">
+          3 6 9 12 15 18
+          21 24 27 30 33 36
+          39 42 45 48 51 54
+          57 60 63 66 69 72
+          75 78 81 84 87 90
+          93 96 99 102 105 108
+          111 114 117 120 123 126
+          129 132 135 138 141 144
+          147 150
+        </DataArray>
+      </Polys>
+    </Piece>
+  </PolyData>
+</VTKFile>
