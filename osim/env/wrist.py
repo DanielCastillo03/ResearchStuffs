@@ -9,7 +9,7 @@ from .osim import OsimEnv
 
 
 class WristEnv(OsimEnv):    
-   model_path =   os.path.join(os.path.dirname(__file__), '../models2/wristfixed.osim')
+   model_path =   os.path.join(os.path.dirname(__file__), '../ARMS_Wrist_Hand_Model_3.3/Hand_Wrist_Model_for_development.osim')
    time_limit = 200
    targetX = 0
    targetY = 0
@@ -19,14 +19,6 @@ class WristEnv(OsimEnv):
 
         res = [self.target_x, self.target_y]
 
-        # for body_part in ["r_humerus", "r_ulna_radius_hand"]:
-        #     res += state_desc["body_pos"][body_part][0:2]
-        #     res += state_desc["body_vel"][body_part][0:2]
-        #     res += state_desc["body_acc"][body_part][0:2]
-        #     res += state_desc["body_pos_rot"][body_part][2:]
-        #     res += state_desc["body_vel_rot"][body_part][2:]
-        #     res += state_desc["body_acc_rot"][body_part][2:]
-
         for joint in ["elbow","radioulnar",]:
             res += state_desc["joint_pos"][joint]
             res += state_desc["joint_vel"][joint]
@@ -34,8 +26,6 @@ class WristEnv(OsimEnv):
 
         for muscle in sorted(state_desc["muscles"].keys()):
             res += [state_desc["muscles"][muscle]["activation"]]
-            # res += [state_desc["muscles"][muscle]["fiber_length"]]
-            # res += [state_desc["muscles"][muscle]["fiber_velocity"]]
 
         res += state_desc["markers"]["thumb"]["pos"][:2]
 
@@ -54,7 +44,6 @@ class WristEnv(OsimEnv):
 
         state = self.osim_model.get_state()
 
-#        self.target_joint.getCoordinate(0).setValue(state, self.target_x, False)
         self.target_joint.getCoordinate(1).setValue(state, self.target_x, False)
 
         self.target_joint.getCoordinate(2).setLocked(state, False)
@@ -94,8 +83,7 @@ class WristEnv(OsimEnv):
    def reward(self):
         state_desc = self.get_state_desc()
         penalty = (state_desc["markers"]["thumb"]["pos"][0] - self.target_x)**2 + (state_desc["markers"]["thumb"]["pos"][1] - self.target_y)**2
-        # print(state_desc["markers"]["r_radius_styloid"]["pos"])
-        # print((self.target_x, self.target_y))
+
         if np.isnan(penalty):
             penalty = 1
         return 1.-penalty
